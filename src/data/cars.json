@@ -1,0 +1,32 @@
+[
+{
+    "marca": "Mercedes",
+    "numerodechassi":"Mercedes1",
+    "imagemmarca": "https://www.carlogos.org/logo/Mercedes-Benz-logo-2011-1920x1080.png",
+    "modelo": "Benz G 300 w463",
+    "preco": 36500,
+    "tipodechassi": "Suv",
+    "estado": "Usado",
+    "anofabrico": "1992",
+    "numerokm": 367474,
+    "potencia": 112,
+    "capacidade": 5204,
+    "combustivel": "Diesel",
+    "corexterior": "Dark Green",
+    "tranmissao": "Manual",
+    "portas": 5,
+    "imagens": [
+      "https://cdn.easysite.pt/pub/6532/861118/EDN_NCAUTO_13683709-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/861118/EDN_NCAUTO_13683708-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/861118/EDN_NCAUTO_13683711-0.jpg"
+    ],
+    "sensores": "n/a",
+    "seguranca": [
+      "ABS",
+      "Airbag do passageiro",
+      "Controlo de estabilidade (ESP)",
+      "Airbag do condutor"
+    ],
+    "tipofarois": "Xenon & Led"
+  }
+]
