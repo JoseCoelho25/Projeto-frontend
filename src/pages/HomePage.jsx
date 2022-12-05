@@ -15,12 +15,7 @@ function HomePage() {
     <div>
     <Menu />
     <img src={InsideCar} alt="car-banner" className="container mx-auto w-screen h-72 grayscale" />
-    <div className="container mx-auto grid grid-cols-1 md:grid-cols-3  gap-2">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-    </div>
+    <Card />
     <Footer />
     </div>
   )

@@ -25,7 +25,7 @@ function App() {
         <Route path="/" element={<IntroPage />} />
         <Route path="/homepage" element={<HomePage />} />
         <Route path="/directionpage" element={<LocationPage />} />
-        <Route path="/details" element={<Details />}/>
+        <Route path="/details/:numerodechassi" element={<Details />}/>
       </Routes>
     </BrowserRouter>
   );

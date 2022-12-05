@@ -1,37 +1,80 @@
 import React from 'react'
+import calendar from "../imgs/calender-color.png";
+import cars from "../data/cars.json";
+import km from "../imgs/road.png";
+import pump from "../imgs/petrol-colored.png";
+import chassis from "../imgs/chassis.png";
+import engine from "../imgs/engine-color.png";
+import speed from "../imgs/speedometer-color.png";
+import carDoor from "../imgs/car-door.png";
+import color from "../imgs/pallete.png";
+import gearColor from "../imgs/gear-color.png"
+import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 
 function DetailsCard() {
+    const [isActive, setIsActive] = useState(false);
+    const handleClick = event => {
+        setIsActive(current => !current);
+      };
+    
+    const params = useParams();
+    const idData = params.numerodechassi;
+    const data = cars.find((car)=>(car.numerodechassi === idData));
+
   return (
     <div>
        
-<div className="mt-6 bg-gray-50">
-                  <div className=" px-10 py-6 mx-auto">
-                        
-                  
-		                
-                        <div className="mt-2 ml-12">
-
-                            <div className="flex items-center justify-start mt-4 mb-4">
-                        	    <div className="px-2 py-1 font-bold bg-red-400 text-white rounded-lg hover:bg-gray-500">BMW serie 8</div>
-                             </div>
-                        
-                        	<div
-                                className="sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-purple-500  hover:underline">Django Authentication with oauth using facebook,twitter and google</div>
-
-                               
-                                
-
-                                
-                               
-                       </div>
-                    
-                      
-                 
-				    </div>
-					<h2 className="text-2xl mt-4 text-gray-500 font-bold text-center">Related Posts</h2>
-  <div className="max-w-7xl mx-auto px-5 mb-3">
-  <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+             <div className="mt-6 bg-gray-50">
+                  <div className="container grid grid-rows-4 grid-cols-3 mx-auto w-1/3 gap-y-4 ">
+                        <div className="flex gap-4 mx-auto text-xl text-gray-500 font-bold items-center">
+                            <img src={calendar} alt="calendar" />
+					        <h4> {data.anofabrico}</h4>
+                        </div>
+                        <div className="flex gap-4 mx-auto text-xl text-gray-500 font-bold items-center">
+                            <img src={km} alt="km" className="w-8"/>
+					        <h4> {data.numerokm}Km</h4>
+                        </div>
+                        <div className="flex gap-4 mx-auto text-xl text-gray-500 font-bold items-center">
+                            <img src={pump} alt="essence" className="w-12"/>
+					        <h4> {data.combustivel}</h4>
+                        </div>
+                        <button className={isActive ? 'collapse' : 'click'} onClick={handleClick}>
+        Click
+      </button>   
+                        <div className="flex gap-4 mx-auto text-xl text-gray-500 font-bold items-center">
+                            <img src={chassis} alt="chassis" className="w-12"/>
+					        <h4> {data.tipodechassi}</h4>
+                        </div>
+                        <div className="flex gap-4 mx-auto text-xl text-gray-500 font-bold items-center">
+                            <img src={speed} alt="chassis" className="w-12"/>
+					        <h4> {data.potencia}Cv</h4>
+                        </div>
+                        <div className="flex gap-4 mx-auto text-xl text-gray-500 font-bold items-center">
+                            <img src={engine} alt="chassis" className="w-12"/>
+					        <h4> {data.capacidade}CC</h4>
+                        </div>
+                        <div className="flex gap-4 mx-auto text-xl text-gray-500 font-bold items-center">
+                            <img src={carDoor} alt="chassis" className="w-12"/>
+					        <h4> {data.portas}Portas</h4>
+                        </div>
+                        <div className="flex gap-4 mx-auto text-xl text-gray-500 font-bold items-center">
+                            <img src={color} alt="chassis" className="w-12"/>
+					        <h4> {data.corexterior}</h4>
+                        </div>
+                        <div className="flex gap-4 mx-auto text-xl text-gray-500 font-bold items-center">
+                            <img src={gearColor} alt="chassis" className="w-12"/>
+					        <h4> {data.tranmissao}</h4>
+                        </div>  
+                 </div>
+			</div>
+       
+       
+           
+					<h2 className="text-2xl mt-4 text-gray-500 font-bold text-center">Carros Semelhantes</h2>
+        <div className="max-w-7xl mx-auto px-5 mb-3">
+            <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
             
 
             <div className="grid grid-cols-12 col-span-12 gap-7">
@@ -78,8 +121,8 @@ function DetailsCard() {
         </div>
  
 
-        </div>
-    </div>
+</div>
+    
 
     
 
