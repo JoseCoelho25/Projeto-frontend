@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 function Menu() {
   return (
-    <div className="container mx-auto relative shadow bg-blue-400 h-24 pt-6">
+    <div className="container mx-auto relative shadow bg-blue-400 h-24 pt-6 w-screen">
         <div className="w-full backdrop-blur-sm">
             <div className="relative z-1 h-16 mx-auto px-5 max-w-7xl flex items-center justify-between text-white">
                 <Link to="/" className="" >
@@ -12,10 +12,10 @@ function Menu() {
                   </Link>
                 
     
-                <ul className="flex items-center gap-5">
-                    <li><Link to ="/homepage" className="hover:text-cyan-400 transition-colors">Home</Link></li>
-                    <li><Link to="/directionpage" className="hover:text-cyan-400 transition-colors" >Localização</Link></li>
-                    <li><Link to="/" className="hover:text-cyan-400 transition-colors">Marcar test-drive</Link></li>
+                <ul className="flex items-center gap-2 md:gap-7">
+                    <li><Link to ="/homepage" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl">Home</Link></li>
+                    <li><Link to="/directionpage" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl" >Localização</Link></li>
+                    <li><Link to="/testdrive" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl">Test-drive</Link></li>
                 </ul>
             </div>
         </div>

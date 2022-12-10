@@ -8,8 +8,7 @@ module.exports = {
     },
     backgroundImage: {
       'hero-nav': "url('/src/imgs/logoZe.png')",
-      
-    }
+    },
   },
   plugins: [],
 }

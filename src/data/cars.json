@@ -88,7 +88,12 @@
       "ABS",
       "Airbag do passageiro",
       "Controlo de estabilidade (ESP)",
-      "Airbag do condutor"
+      "Airbag do condutor",
+      "Cruize Control",
+      "Espelho retrovisor interior anti-encadeamento",
+      "Fecho Central",
+      "Jantes Liga Leve Jantes 17"
+
     ],
     "tipofarois": "Led"
   },
@@ -142,6 +147,105 @@
       "https://cdn.easysite.pt/pub/6532/957112/EDN_NCAUTO_18389994-0.jpg",
       "https://cdn.easysite.pt/pub/6532/957112/EDN_NCAUTO_18389981-0.jpg",
       "https://cdn.easysite.pt/pub/6532/957112/EDN_NCAUTO_18389987-0.jpg"
+    ],
+    "sensores": "n/a",
+    "seguranca": [
+      "ABS",
+      "Airbag do passageiro",
+      "Controlo de estabilidade (ESP)",
+      "Airbag do condutor"
+    ],
+    "tipofarois": "No Info"
+  },
+  {
+    "marca": "Audi",
+    "numerodechassi": "Audi1",
+    "imagemmarca": "https://media.gettyimages.com/id/94938694/pt/foto/a-visitor-looks-at-a-lamborghini-gallardo-lp-560-4-spyder-automobile-at-volkswagen-ags-annual.jpg?s=612x612&w=0&k=20&c=leZvzt5jcA8S9W9tcZGxgsEdwVsWJH5CTU1EQpF9rMk=",
+    "modelo": "A7 3.0 TDI V6 S-LINE Quattro",
+    "preco": 44500,
+    "tipodechassi": "Sedan",
+    "estado": "Usado",
+    "anofabrico": "2016",
+    "numerokm": 154857,
+    "potencia": 320,
+    "capacidade": 3000,
+    "combustivel": "Diesel",
+    "corexterior": "Gray",
+    "tranmissao": "Auto",
+    "portas": 5,
+    "imagens": [
+      "https://cdn.easysite.pt/pub/6532/769298/EDN_NCAUTO_10982688-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/769298/EDN_NCAUTO_10982689-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/769298/EDN_NCAUTO_10982692-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/769298/EDN_NCAUTO_10982706-0.jpg"
+    ],
+    "sensores": "sensores de luzes",
+    "seguranca": [
+      "ABS",
+      "Airbag do passageiro",
+      "Controlo de estabilidade (ESP)",
+      "Airbag do condutor",
+      "Camara 360º",
+      "Câmara de Marcha Atrás",
+      "Cruise Control",
+      "Direcção Assistida",
+      "ESP"
+    ],
+    "tipofarois": "No Info"
+  },
+  {
+    "marca": "Mercedes",
+    "numerodechassi":"Mercedes2",
+    "imagemmarca": "https://www.carlogos.org/logo/Mercedes-Benz-logo-2011-1920x1080.png",
+    "modelo": "Benz E 220 D Avantgarde",
+    "preco": 37500,
+    "tipodechassi": "Citadino",
+    "estado": "Usado",
+    "anofabrico": "1992",
+    "numerokm": 122650,
+    "potencia": 194,
+    "capacidade": 1950,
+    "combustivel": "Diesel",
+    "corexterior": "Black",
+    "tranmissao": "Auto",
+    "portas": 4,
+    "imagens": [
+      "https://cdn.easysite.pt/pub/6532/955142/EDN_NCAUTO_18264567-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/955142/EDN_NCAUTO_18264563-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/955142/EDN_NCAUTO_18264554-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/955142/EDN_NCAUTO_18264539-0.jpg"
+    ],
+    "sensores": "n/a",
+    "seguranca": [
+      "ABS",
+      "Airbag do passageiro",
+      "Controlo de estabilidade (ESP)",
+      "Airbag do condutor",
+      "Camera 360º",
+      "Bancos desportivos"
+    ],
+    "tipofarois": "Xenon & Led"
+  },
+  {
+    "marca": "Toyota",
+    "numerodechassi":"Toyota1",
+    "imagemmarca": "https://www.carlogos.org/logo/Mercedes-Benz-logo-2011-1920x1080.png",
+    "modelo": "Land Cruiser KZJ 95 3.0 TD",
+    "preco": 18500,
+    "tipodechassi": "Suv",
+    "estado": "Usado",
+    "anofabrico": "2000",
+    "numerokm": 375805,
+    "potencia": 125,
+    "capacidade": 2982,
+    "combustivel": "Diesel",
+    "corexterior": "Dark Green",
+    "tranmissao": "Manual",
+    "portas": 5,
+    "imagens": [
+      "https://cdn.easysite.pt/pub/6532/1052862/EDN_NCAUTO_22177581-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/1052862/EDN_NCAUTO_22177584-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/1052862/EDN_NCAUTO_22031267-0.jpg"
     ],
     "sensores": "n/a",
     "seguranca": [

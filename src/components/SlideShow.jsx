@@ -41,15 +41,15 @@ function SlideShow() {
   
   return (
     <div className="container mx-auto flex mt-10">
-      <button className="h-16 rounded-lg text-5xl text-white bg-blue-400 text-center my-auto pb-2 cursor-pointer" onClick={prevImage}>{"<"}</button>
+      <button className="h-10 md:h-16 rounded-lg text-xl md:text-5xl ml-4 md:ml-0 text-white bg-blue-400 text-center my-auto pb-2 cursor-pointer" onClick={prevImage}>{"<"}</button>
       <div>
         <div>
           <div className="container block mb-5">
               <div className="sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-gray-700 text-center  hover:underline">{data.marca}</div>
               <div className="sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl text-gray-500 text-center ">{data.modelo}</div>
           </div>
-          <div className="container mx-auto w-1/2 h-auto">
-            <div className="flex overflow-x-auto gap-6 snap-x snap-mandatory before:shrink-0 before:w-1/12 after:shrink-0 after:w-1/12 scroll-smooth">
+          <div className="container mx-auto w-full md:w-3/4 h-auto">
+            <div className="flex overflow-x-auto gap-10 snap-x snap-mandatory before:shrink-0 before:w-1/12 after:shrink-0 after:w-1/12 scroll-smooth">
                 <img src={data.imagens[value]} alt="img" className="snap-center shrink-0" />
                 <img src={data.imagens[value + 1]} alt="img" className="snap-center shrink-0" />
                 <img src={data.imagens[value + 2]} alt="img" className="snap-center shrink-0" />
@@ -71,7 +71,7 @@ function SlideShow() {
               
           </div> 
       </div>
-       <button className="h-16 rounded-lg text-5xl text-white bg-blue-400 text-center my-auto pb-2"  onClick={nextImage}>{">"}</button> 
+       <button className="h-10 md:h-16 rounded-lg text-xl md:text-5xl mr-4 md:mr-0 text-white bg-blue-400 text-center my-auto pb-2"  onClick={nextImage}>{">"}</button> 
     </div>
   )
 }
