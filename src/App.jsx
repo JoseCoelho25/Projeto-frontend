@@ -7,6 +7,7 @@ import "./app.css";
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
+
 function App() {
 
   function ScrollToTop() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/homepage" element={<HomePage />} />
         <Route path="/directionpage" element={<LocationPage />} />
         <Route path="/details/:numerodechassi" element={<Details />}/>
+       
       </Routes>
     </BrowserRouter>
   );

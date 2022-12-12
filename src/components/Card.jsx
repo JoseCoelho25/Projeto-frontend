@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from "react-router-dom";
 import Speedometer from "../imgs/speedometer.png";
 import Petrol from "../imgs/petrol.png";
 import Engine from "../imgs/engine.png";
 import Gear from "../imgs/gear.png";
+import Glass from "../imgs/mag-glass.png"
 import cars from "../data/cars.json";
 
 function Card() {
+	const [text, setText] = useState ("");
+
+	const carsToRender = cars.filter((car) => car.marca.toLowerCase().includes(text.toLowerCase()) || car.modelo.toLowerCase().includes(text.toLowerCase()));
+
   return (
-    <div className="container mx-auto w-screen mt-12">
-   
-
-
+    <div className="container mx-auto w-screen mt-6">
+		<p className="text-4xl font-bold text-center mb-2">Pesquisa Rapida</p>
+		<div className="container flex justify-center mb-8">
+			
+			<div className="flex w-2/3">
+			<input type="text" onChange={(n)=>{
+				setText(n.target.value) 
+			}} value={text} placeholder="Procure por marca, modelo, caracteristica, etc..." className="mx-auto w-full rounded-lg pl-12"/>
+			<img src={Glass} alt="glass" className=" w-10 absolute justify-end"/>
+			</div>
+		</div>
 	<div className="bg-white shadow-md rounded-lg  grid grid-cols-1 md:grid-cols-3 gap-2">
-		{cars.map((car)=>(
+		{carsToRender.map((car)=>(
 			<div key={car}>
         <Link to={`/details/${car.numerodechassi}`} className="col-span-1">
                   <img src={car.imagens[0]} alt="card" className="rounded-t-lg " />

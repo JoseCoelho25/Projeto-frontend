@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { useEffect } from 'react';
 
 
+
 function HomePage() {
   useEffect(()=> {
     window.scrollTo({top: 0, left:0 ,behaviour:"smooth"});
