@@ -13,8 +13,9 @@ function Menu() {
                 
     
                 <ul className="flex items-center gap-2 md:gap-7">
-                    <li><Link to ="/homepage" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl">Home</Link></li>
+                    <li><Link to ="/homepage" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl">Carros</Link></li>
                     <li><Link to="/directionpage" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl" >Localização</Link></li>
+                    <li><Link to="/aboutpage" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl">Sobre nós</Link></li>
                     <li><Link to="/testdrive" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl">Test-drive</Link></li>
                 </ul>
             </div>

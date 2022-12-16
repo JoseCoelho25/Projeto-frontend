@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import IntroPage from "./pages/IntroPage";
 import LocationPage from "./pages/LocationPage";
 import Details from "./pages/Details";
+import AboutPage from './pages/AboutPage';
 import "./app.css";
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -27,7 +28,7 @@ function App() {
         <Route path="/homepage" element={<HomePage />} />
         <Route path="/directionpage" element={<LocationPage />} />
         <Route path="/details/:numerodechassi" element={<Details />}/>
-       
+        <Route path="/aboutpage" element={<AboutPage />}></Route>
       </Routes>
     </BrowserRouter>
   );

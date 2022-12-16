@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef} from 'react';
 import {Link} from "react-router-dom";
 import Speedometer from "../imgs/speedometer.png";
 import Petrol from "../imgs/petrol.png";
@@ -7,10 +7,50 @@ import Gear from "../imgs/gear.png";
 import Glass from "../imgs/mag-glass.png"
 import cars from "../data/cars.json";
 
-function Card() {
-	const [text, setText] = useState ("");
+// variavel para criar keys unicas
+const keygen = () => Date.now().toString() + Math.random()
 
+function Card() {
+	//useRef para ao usar a função handleclick fazer scroll para a div
+	const ref = useRef(null);
+
+	const [text, setText] = useState ("");
+	
 	const carsToRender = cars.filter((car) => car.marca.toLowerCase().includes(text.toLowerCase()) || car.modelo.toLowerCase().includes(text.toLowerCase()));
+
+	const [clicked, setClicked] = useState([]);
+	const [compare, setCompare] = useState (false);
+	console.log(clicked)
+
+	//funcçao para selecionar o numero de chassi de cada card e colocar o compare true se tiver 2 elementos
+	function handleClick (e) {
+		e.currentTarget.classList.toggle("bg-red-700")
+		const click = e.target.value;
+		// let newArray = []
+		if ( clicked.includes(click)){
+			const index = clicked.indexOf(click);
+			if (index > -1) { // only splice array when item is found
+  				clicked.splice(index, 1); // 2nd parameter means remove one item only
+				setClicked(clicked)
+			}
+		}
+		else{
+			let newArray=[...clicked, click]
+			setClicked(newArray)
+			if (clicked.length === 1){
+				setCompare(true);
+				ref.current?.scrollIntoView({behavior: 'smooth'});
+			}
+			else{
+				setCompare(false)
+			}
+		}
+		
+	}
+	//filtros para aparecer no compare
+	const data = cars.find((car)=>(car.numerodechassi === clicked[0]));
+	const data1 = cars.find((car)=> (car.numerodechassi === clicked[1]))
+	
 
   return (
     <div className="container mx-auto w-screen mt-6">
@@ -25,8 +65,8 @@ function Card() {
 			</div>
 		</div>
 	<div className="bg-white shadow-md rounded-lg  grid grid-cols-1 md:grid-cols-3 gap-2">
-		{carsToRender.map((car)=>(
-			<div key={car}>
+		{carsToRender.map((car, index)=>(
+			<div key={keygen()}>
         <Link to={`/details/${car.numerodechassi}`} className="col-span-1">
                   <img src={car.imagens[0]} alt="card" className="rounded-t-lg " />
                   </Link>
@@ -60,16 +100,60 @@ function Card() {
 				
 				<div className="flex items-center justify-between">
 					<span className="text-3xl font-bold text-gray-900 dark:text-white">{car.preco}€</span>
-					<Link to="/" 
-						className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Comparar</Link>
+					<button
+						className="text-white bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" value={car.numerodechassi} onClick={handleClick}>Comparar</button>
 				</div>
 			</div>
 			</div>
 			))}
+	</div>
+	<div className="mt-8" ref={ref}>
+		 {compare ? (
+            <div className="container mx-auto grid grid-cols-3" >
+				<div className="text-2xl font-bold grid grid-cols-1 gap-y-4">
+					<div>Marca</div>
+					<div>Modelo</div>
+					<div>Preço</div>
+					<div>Chassis</div>
+					<div>Ano fabrico</div>
+					<div>Kilometragem</div>
+					<div>Potência</div>
+					<div>Combustivel</div>
+					<div>Caixa de mudanças</div>
+					<div>Portas</div>
+				</div>
+				<div className="text-xl grid grid-cols-1 gap-y-4">
+					<div>{data.marca}</div>
+					<div>{data.modelo}</div>
+					<div>{data.preco}€</div>
+					<div>{data.tipodechassi}</div>
+					<div>{data.anofabrico}</div>
+					<div>{data.numerokm}Km</div>
+					<div>{data.potencia}CC</div>
+					<div>{data.combustivel}</div>
+					<div>{data.tranmissao}</div>
+					<div>{data.portas}</div>
+				</div>
+				<div className="text-xl grid grid-cols-1 gap-y-4">
+					<div>{data1.marca}</div>
+					<div>{data1.modelo}</div>
+					<div>{data1.preco}€</div>
+					<div>{data1.tipodechassi}</div>
+					<div>{data1.anofabrico}</div>
+					<div>{data1.numerokm}Km</div>
+					<div>{data1.potencia}CC</div>
+					<div>{data1.combustivel}</div>
+					<div>{data1.tranmissao}</div>
+					<div>{data1.portas}</div>
+				</div>
+            </div>
+          ) : (
+            ''
+          )}
 	</div>	
-	
 </div>
   )
 }
+
 
 export default Card

@@ -32,12 +32,6 @@ function SlideShow() {
     function goToImage(event){
        setValue(parseInt(event.target.value));
     }
-    
-  // const ref = useRef(null);
-
-  // const handleClick = () => {
-  //   ref.current?.scrollIntoView({behavior: 'smooth'});
-  // };
   
   return (
     <div className="container mx-auto flex mt-10">
@@ -51,8 +45,7 @@ function SlideShow() {
           <div className="container mx-auto w-full md:w-3/4 h-auto">
             <div className="flex overflow-x-auto gap-10 snap-x snap-mandatory before:shrink-0 before:w-1/12 after:shrink-0 after:w-1/12 scroll-smooth">
                 <img src={data.imagens[value]} alt="img" className="snap-center shrink-0" />
-                <img src={data.imagens[value + 1]} alt="img" className="snap-center shrink-0" />
-                <img src={data.imagens[value + 2]} alt="img" className="snap-center shrink-0" />
+                
             </div>
           </div>
         </div>
