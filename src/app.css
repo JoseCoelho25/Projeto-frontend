@@ -1,0 +1,24 @@
+/* solução encontrada para eliminar o scrollbar introduzido automaticamente pelo chrome */
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.leaflet-container {
+    width:50%;
+    height:50%;
+    position:absolute;
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 1280px) {
+    .leaflet-container {
+      display: none;
+    }
+  }
+
+  .container-snap::-webkit-scrollbar {
+    display: none;
+}

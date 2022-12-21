@@ -1,0 +1,259 @@
+[
+{
+    "marca": "Mercedes",
+    "numerodechassi":"Mercedes1",
+    "imagemmarca": "https://www.carlogos.org/logo/Mercedes-Benz-logo-2011-1920x1080.png",
+    "modelo": "Benz G 300 w463",
+    "preco": 36500,
+    "tipodechassi": "Suv",
+    "estado": "Usado",
+    "anofabrico": "1992",
+    "numerokm": 367474,
+    "potencia": 112,
+    "capacidade": 5204,
+    "combustivel": "Diesel",
+    "corexterior": "Dark Green",
+    "tranmissao": "Manual",
+    "portas": 5,
+    "imagens": [
+      "https://cdn.easysite.pt/pub/6532/861118/EDN_NCAUTO_13683709-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/861118/EDN_NCAUTO_13683708-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/861118/EDN_NCAUTO_13683711-0.jpg"
+    ],
+    "sensores": "n/a",
+    "seguranca": [
+      "ABS",
+      "Airbag do passageiro",
+      "Controlo de estabilidade (ESP)",
+      "Airbag do condutor"
+    ],
+    "tipofarois": "Xenon & Led"
+  },
+  {
+    "marca": "Mazda",
+    "numerodechassi": "Mazda1",
+    "imagemmarca": "https://www.carlogos.org/logo/Mercedes-Benz-logo-2011-1920x1080.png",
+    "modelo": "MX-5 1.8i",
+    "preco": 14450,
+    "tipodechassi": "Coupe",
+    "estado": "Usado",
+    "anofabrico": "2008",
+    "numerokm": 137000,
+    "potencia": 124,
+    "capacidade": 1798,
+    "combustivel": "Gasolina",
+    "corexterior": "Branco",
+    "tranmissao": "Manual",
+    "portas": 2,
+    "imagens": [
+      "https://auto8.imgs.sapo.pt/0155/00000155/v/0496/002575496/Original/Mazda-MX-5-172127005.jpg",
+      "https://auto8.imgs.sapo.pt/0155/00000155/v/0496/002575496/Original/Mazda-MX-5-172127006.jpg",
+      "https://auto8.imgs.sapo.pt/0155/00000155/v/0496/002575496/Original/Mazda-MX-5-172127007.jpg",
+      "https://auto8.imgs.sapo.pt/0155/00000155/v/0496/002575496/Original/Mazda-MX-5-172127014.jpg"
+    ],
+    "sensores": "n/a",
+    "seguranca": [
+      "ABS",
+      "Airbag do passageiro",
+      "Controlo de estabilidade (ESP)",
+      "Airbag do condutor",
+      "Fecho central",
+      "Sistema imobilizador"
+    ],
+    "tipofarois": "Xenon & Led"
+  },
+  {
+    "marca": "Mitsubishi",
+    "numerodechassi": "Mitsubishi1",
+    "imagemmarca": "https://www.carlogos.org/logo/Mitsubishi-logo-2000x2500.png",
+    "modelo": "Evolution VIII",
+    "preco": 52500,
+    "tipodechassi": "Sedan",
+    "estado": "Usado",
+    "anofabrico": "2006",
+    "numerokm": 51901,
+    "potencia": 256,
+    "capacidade": 5204,
+    "combustivel": "Gasoline",
+    "corexterior": "Silver Gray",
+    "tranmissao": "Manual",
+    "portas": 5,
+    "imagens": [
+      "https://cdn.easysite.pt/pub/6532/804978/EDN_NCAUTO_20319525-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/804978/EDN_NCAUTO_20319519-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/804978/EDN_NCAUTO_20319523-0.jpg"
+    ],
+    "sensores": "n/a",
+    "seguranca": [
+      "ABS",
+      "Airbag do passageiro",
+      "Controlo de estabilidade (ESP)",
+      "Airbag do condutor",
+      "Cruize Control",
+      "Espelho retrovisor interior anti-encadeamento",
+      "Fecho Central",
+      "Jantes Liga Leve Jantes 17"
+
+    ],
+    "tipofarois": "Led"
+  },
+  {
+    "marca": "Ford",
+    "numerodechassi": "Ford1",
+    "imagemmarca": "https://www.carlogos.org/car-logos/ford-logo-2017.png",
+    "modelo": "MK2 2.5 Ultimate",
+    "preco": 90000,
+    "tipodechassi": "Coupe",
+    "estado": "Usado",
+    "anofabrico": "1992",
+    "numerokm": 19815,
+    "potencia": 350,
+    "capacidade": 5204,
+    "combustivel": "Gasoline",
+    "corexterior": "White",
+    "tranmissao": "Manual",
+    "portas": 2,
+    "imagens": [
+      "https://cdn.easysite.pt/pub/6532/976183/EDN_NCAUTO_21304482-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/976183/EDN_NCAUTO_21304476-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/976183/EDN_NCAUTO_21304474-0.jpg"
+    ],
+    "sensores": "n/a",
+    "seguranca": [
+      "ABS",
+      "Airbag do passageiro",
+      "Controlo de estabilidade (ESP)",
+      "Airbag do condutor"
+    ],
+    "tipofarois": "No Info"
+  },
+  {
+    "marca": "Renault",
+    "numerodechassi": "Renault1",
+    "imagemmarca": "https://media.gettyimages.com/id/94938694/pt/foto/a-visitor-looks-at-a-lamborghini-gallardo-lp-560-4-spyder-automobile-at-volkswagen-ags-annual.jpg?s=612x612&w=0&k=20&c=leZvzt5jcA8S9W9tcZGxgsEdwVsWJH5CTU1EQpF9rMk=",
+    "modelo": "Clio 1.8 16v",
+    "preco": 14000,
+    "tipodechassi": "Citadino",
+    "estado": "Usado",
+    "anofabrico": "1995",
+    "numerokm": 131107,
+    "potencia": 138,
+    "capacidade": 1764,
+    "combustivel": "Gasoline",
+    "corexterior": "Gray",
+    "tranmissao": "Manual",
+    "portas": 3,
+    "imagens": [
+      "https://cdn.easysite.pt/pub/6532/957112/EDN_NCAUTO_18389994-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/957112/EDN_NCAUTO_18389981-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/957112/EDN_NCAUTO_18389987-0.jpg"
+    ],
+    "sensores": "n/a",
+    "seguranca": [
+      "ABS",
+      "Airbag do passageiro",
+      "Controlo de estabilidade (ESP)",
+      "Airbag do condutor"
+    ],
+    "tipofarois": "No Info"
+  },
+  {
+    "marca": "Audi",
+    "numerodechassi": "Audi1",
+    "imagemmarca": "https://media.gettyimages.com/id/94938694/pt/foto/a-visitor-looks-at-a-lamborghini-gallardo-lp-560-4-spyder-automobile-at-volkswagen-ags-annual.jpg?s=612x612&w=0&k=20&c=leZvzt5jcA8S9W9tcZGxgsEdwVsWJH5CTU1EQpF9rMk=",
+    "modelo": "A7 3.0 TDI V6 S-LINE Quattro",
+    "preco": 44500,
+    "tipodechassi": "Sedan",
+    "estado": "Usado",
+    "anofabrico": "2016",
+    "numerokm": 154857,
+    "potencia": 320,
+    "capacidade": 3000,
+    "combustivel": "Diesel",
+    "corexterior": "Gray",
+    "tranmissao": "Auto",
+    "portas": 5,
+    "imagens": [
+      "https://cdn.easysite.pt/pub/6532/769298/EDN_NCAUTO_10982688-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/769298/EDN_NCAUTO_10982689-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/769298/EDN_NCAUTO_10982692-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/769298/EDN_NCAUTO_10982706-0.jpg"
+    ],
+    "sensores": "sensores de luzes",
+    "seguranca": [
+      "ABS",
+      "Airbag do passageiro",
+      "Controlo de estabilidade (ESP)",
+      "Airbag do condutor",
+      "Camara 360º",
+      "Câmara de Marcha Atrás",
+      "Cruise Control",
+      "Direcção Assistida",
+      "ESP"
+    ],
+    "tipofarois": "No Info"
+  },
+  {
+    "marca": "Mercedes",
+    "numerodechassi":"Mercedes2",
+    "imagemmarca": "https://www.carlogos.org/logo/Mercedes-Benz-logo-2011-1920x1080.png",
+    "modelo": "Benz E 220 D Avantgarde",
+    "preco": 37500,
+    "tipodechassi": "Citadino",
+    "estado": "Usado",
+    "anofabrico": "1992",
+    "numerokm": 122650,
+    "potencia": 194,
+    "capacidade": 1950,
+    "combustivel": "Diesel",
+    "corexterior": "Black",
+    "tranmissao": "Auto",
+    "portas": 4,
+    "imagens": [
+      "https://cdn.easysite.pt/pub/6532/955142/EDN_NCAUTO_18264567-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/955142/EDN_NCAUTO_18264563-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/955142/EDN_NCAUTO_18264554-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/955142/EDN_NCAUTO_18264539-0.jpg"
+    ],
+    "sensores": "n/a",
+    "seguranca": [
+      "ABS",
+      "Airbag do passageiro",
+      "Controlo de estabilidade (ESP)",
+      "Airbag do condutor",
+      "Camera 360º",
+      "Bancos desportivos"
+    ],
+    "tipofarois": "Xenon & Led"
+  },
+  {
+    "marca": "Toyota",
+    "numerodechassi":"Toyota1",
+    "imagemmarca": "https://www.carlogos.org/logo/Mercedes-Benz-logo-2011-1920x1080.png",
+    "modelo": "Land Cruiser KZJ 95 3.0 TD",
+    "preco": 18500,
+    "tipodechassi": "Suv",
+    "estado": "Usado",
+    "anofabrico": "2000",
+    "numerokm": 375805,
+    "potencia": 125,
+    "capacidade": 2982,
+    "combustivel": "Diesel",
+    "corexterior": "Dark Green",
+    "tranmissao": "Manual",
+    "portas": 5,
+    "imagens": [
+      "https://cdn.easysite.pt/pub/6532/1052862/EDN_NCAUTO_22177581-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/1052862/EDN_NCAUTO_22177584-0.jpg",
+      "https://cdn.easysite.pt/pub/6532/1052862/EDN_NCAUTO_22031267-0.jpg"
+    ],
+    "sensores": "n/a",
+    "seguranca": [
+      "ABS",
+      "Airbag do passageiro",
+      "Controlo de estabilidade (ESP)",
+      "Airbag do condutor"
+    ],
+    "tipofarois": "No Info"
+  }
+]
