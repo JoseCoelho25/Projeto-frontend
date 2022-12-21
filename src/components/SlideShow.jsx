@@ -4,7 +4,8 @@ import "../app.css";
 import { useParams } from "react-router-dom";
 
 
-function SlideShow() {
+function SlideShow(props) {
+    let cars = props.data
    const [value, setValue] = useState(0)
    const params = useParams();
    const idData = params.numerodechassi;

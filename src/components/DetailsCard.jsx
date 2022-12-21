@@ -18,9 +18,9 @@ import { useParams, Link } from "react-router-dom";
 
 
 
-function DetailsCard() {
+function DetailsCard(props) {
     
-    
+    let cars= props.data;
     
     const params = useParams();
     const idData = params.numerodechassi;

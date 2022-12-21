@@ -16,7 +16,7 @@ function HomePage(props) {
     <div>
     <Menu />
     <img src={InsideCar} alt="car-banner" className="container mx-auto w-screen h-72 grayscale" />
-    <Card />
+    <Card data={props.data}/>
     <Footer />
     </div>
   )
