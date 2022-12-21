@@ -5,13 +5,18 @@ import DetailsCard from "../components/DetailsCard";
 import SlideShow from '../components/SlideShow';
 
 
-function Details() {
+function Details(props) {
   return (
     <div>
         <Menu />
-        <SlideShow/>
-        <DetailsCard />
+        {props.isLoading ? "" :
+        <div>
+        <SlideShow data={props.data}/>
+        <DetailsCard data={props.data}/>
+        </div>
+      }
         <Footer />
+ 
     </div>
   )
 }

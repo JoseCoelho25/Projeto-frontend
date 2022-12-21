@@ -5,12 +5,13 @@ import Petrol from "../imgs/petrol.png";
 import Engine from "../imgs/engine.png";
 import Gear from "../imgs/gear.png";
 import Glass from "../imgs/mag-glass.png"
-import cars from "../data/cars.json";
+//import cars from "../data/cars.json";
 
 // variavel para criar keys unicas
 const keygen = () => Date.now().toString() + Math.random()
 
-function Card() {
+function Card(props) {
+	let cars= props.data;
 	//useRef para ao usar a função handleclick fazer scroll para a div
 	const ref = useRef(null);
 	
