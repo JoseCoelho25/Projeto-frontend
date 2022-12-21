@@ -11,7 +11,7 @@ function AboutPage() {
     <div>
         <Menu />
         <img src={Ferrari} alt="car-banner" className="container mx-auto w-screen h-72 grayscale" />
-        <div>
+        <div className=" container mx-auto">
         <p className="container mx-auto w-screen  text-xl lg:text-4xl font-bold mt-10 mr-2 ml-2">Sobre Nós</p>
         <div className="container w-full mx-auto flex mt-8 ml-2 mr-2">
           <p className="container mx-auto w-screen  text-l lg:text-2xl pt-2 leading-relaxed"> No mercado Automóvel desde 2022, dispomos de uma vasta gama de automóveis, desde utilitários passando por todo-o-terreno, desportivos, de alta gama, bem como clássicos.
