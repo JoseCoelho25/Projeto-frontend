@@ -13,43 +13,58 @@ const keygen = () => Date.now().toString() + Math.random()
 function Card() {
 	//useRef para ao usar a função handleclick fazer scroll para a div
 	const ref = useRef(null);
-
+	
 	const [text, setText] = useState ("");
 	
 	const carsToRender = cars.filter((car) => car.marca.toLowerCase().includes(text.toLowerCase()) || car.modelo.toLowerCase().includes(text.toLowerCase()));
+	
+	//const [data, setData] = useState();
+	//const [data1, setData1] = useState();
+	
 
 	const [clicked, setClicked] = useState([]);
 	const [compare, setCompare] = useState (false);
-	console.log(clicked)
-
+	
 	//funcçao para selecionar o numero de chassi de cada card e colocar o compare true se tiver 2 elementos
-	function handleClick (e) {
-		e.currentTarget.classList.toggle("bg-red-700")
-		const click = e.target.value;
-		// let newArray = []
-		if ( clicked.includes(click)){
-			const index = clicked.indexOf(click);
-			if (index > -1) { // only splice array when item is found
-  				clicked.splice(index, 1); // 2nd parameter means remove one item only
-				setClicked(clicked)
-			}
-		}
-		else{
-			let newArray=[...clicked, click]
-			setClicked(newArray)
-			if (clicked.length === 1){
-				setCompare(true);
-				ref.current?.scrollIntoView({behavior: 'smooth'});
-			}
-			else{
-				setCompare(false)
-			}
-		}
-		
-	}
+	 function handleClick (e) {
+	 	e.currentTarget.classList.toggle("bg-red-700");
+	 	const click = e.target.value;
+	 	 //let newArray = []
+	 	 if ( clicked.includes(click)){
+	 	 	 const index = clicked.indexOf(click);
+	 	 	 //if (index > -1) { 
+  	 	 	 	clicked.splice(index, 1);
+	 	 	 	setClicked(clicked)
+	 	 	//}
+	 	 }
+	 	 else{
+	 	 	let newArray=[...clicked, click]
+	 	 	setClicked(newArray)
+			compareCheck();
+	 	 	// if (clicked.length === 1){
+	 	 	// 	setCompare(true);
+	 	 	// 	ref.current?.scrollIntoView({behavior: 'smooth'});
+	 	 	// }
+	 	 	// else{
+	 	 	// 	setCompare(false)
+	 	 	// }
+	 	 }
+	 }
 	//filtros para aparecer no compare
-	const data = cars.find((car)=>(car.numerodechassi === clicked[0]));
-	const data1 = cars.find((car)=> (car.numerodechassi === clicked[1]))
+	 const data =cars.find((car)=>(car.numerodechassi === clicked[0]));
+	 const data1 =cars.find((car)=> (car.numerodechassi === clicked[1]))
+
+	
+function compareCheck(){
+	if (clicked.length === 1){
+		setCompare(true);
+		ref.current?.scrollIntoView({behaviour: "smooth"});
+	}
+	else{
+		setCompare(false);
+	}
+}
+	
 	
 
   return (
@@ -64,8 +79,8 @@ function Card() {
 			<img src={Glass} alt="glass" className=" w-10 absolute justify-end"/>
 			</div>
 		</div>
-	<div className="bg-white shadow-md rounded-lg  grid grid-cols-1 md:grid-cols-3 gap-2">
-		{carsToRender.map((car, index)=>(
+		<div className="bg-white shadow-md rounded-lg  grid grid-cols-1 md:grid-cols-3 gap-2">
+		{carsToRender.map((car)=>(
 			<div key={keygen()}>
         <Link to={`/details/${car.numerodechassi}`} className="col-span-1">
                   <img src={car.imagens[0]} alt="card" className="rounded-t-lg " />
@@ -101,16 +116,16 @@ function Card() {
 				<div className="flex items-center justify-between">
 					<span className="text-3xl font-bold text-gray-900 dark:text-white">{car.preco}€</span>
 					<button
-						className="text-white bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" value={car.numerodechassi} onClick={handleClick}>Comparar</button>
+						className="text-white bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center border-4" value={car.numerodechassi} onClick={handleClick}>Comparar</button>
 				</div>
 			</div>
 			</div>
 			))}
-	</div>
-	<div className="mt-8" ref={ref}>
+		</div>
+		<div className="mt-8" ref={ref}>
 		 {compare ? (
-            <div className="container mx-auto grid grid-cols-3" >
-				<div className="text-2xl font-bold grid grid-cols-1 gap-y-4">
+            <div className="container mx-auto grid grid-cols-3 grid-rows-8" >
+				<div className="text-m md:text-l lg:text-xl font-bold grid grid-cols-1 gap-y-4 truncate">
 					<div>Marca</div>
 					<div>Modelo</div>
 					<div>Preço</div>
@@ -122,7 +137,7 @@ function Card() {
 					<div>Caixa de mudanças</div>
 					<div>Portas</div>
 				</div>
-				<div className="text-xl grid grid-cols-1 gap-y-4">
+				<div className="text-m md:text-l lg:text-xl grid grid-cols-1 gap-y-4">
 					<div>{data.marca}</div>
 					<div>{data.modelo}</div>
 					<div>{data.preco}€</div>
@@ -134,7 +149,7 @@ function Card() {
 					<div>{data.tranmissao}</div>
 					<div>{data.portas}</div>
 				</div>
-				<div className="text-xl grid grid-cols-1 gap-y-4">
+				<div className="text-m md:text-l lg:text-xl grid grid-cols-1 gap-y-4">
 					<div>{data1.marca}</div>
 					<div>{data1.modelo}</div>
 					<div>{data1.preco}€</div>
@@ -150,7 +165,7 @@ function Card() {
           ) : (
             ''
           )}
-	</div>	
+		</div>	
 </div>
   )
 }

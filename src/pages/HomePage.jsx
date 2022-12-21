@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 
 
-function HomePage() {
+function HomePage(props) {
   useEffect(()=> {
     window.scrollTo({top: 0, left:0 ,behaviour:"smooth"});
   },[])

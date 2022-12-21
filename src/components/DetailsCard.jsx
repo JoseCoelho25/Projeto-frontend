@@ -19,10 +19,7 @@ import { useParams, Link } from "react-router-dom";
 
 
 function DetailsCard() {
-    // const [isActive, setIsActive] = useState(false);
-    // const handleClick = event => {
-    //     setIsActive(current => !current);
-    //   };
+    
     
     
     const params = useParams();
@@ -32,7 +29,7 @@ function DetailsCard() {
     //filtro para carros com o mesmo chassi
     const filterData = cars.filter((car) => (car.tipodechassi === chassi))
     const filterArray = filterData.filter((n)=> (n.numerodechassi !== data.numerodechassi));
-    // const teste = filteredData.shift();
+    
   return (
     <div>
        

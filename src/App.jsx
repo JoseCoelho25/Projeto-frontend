@@ -4,10 +4,11 @@ import IntroPage from "./pages/IntroPage";
 import LocationPage from "./pages/LocationPage";
 import Details from "./pages/Details";
 import AboutPage from './pages/AboutPage';
+import TestDrivePage from "./pages/TestDrivePage";
 import "./app.css";
 import { useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
-
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function App() {
 
@@ -20,6 +21,9 @@ function App() {
   
     return null;
   }
+
+  
+  
   return (
     <BrowserRouter>
     <ScrollToTop />
@@ -29,6 +33,7 @@ function App() {
         <Route path="/directionpage" element={<LocationPage />} />
         <Route path="/details/:numerodechassi" element={<Details />}/>
         <Route path="/aboutpage" element={<AboutPage />}></Route>
+        <Route path="/testDrive" element={<TestDrivePage />}></Route>
       </Routes>
     </BrowserRouter>
   );

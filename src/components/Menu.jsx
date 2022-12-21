@@ -16,7 +16,7 @@ function Menu() {
                     <li><Link to ="/homepage" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl">Carros</Link></li>
                     <li><Link to="/directionpage" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl" >Localização</Link></li>
                     <li><Link to="/aboutpage" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl">Sobre nós</Link></li>
-                    <li><Link to="/testdrive" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl">Test-drive</Link></li>
+                    <li><Link to="/testDrive" className="hover:text-cyan-400 transition-colors text-sm md:text-2xl">Test-drive</Link></li>
                 </ul>
             </div>
         </div>

@@ -12,9 +12,9 @@ function AboutPage() {
         <Menu />
         <img src={Ferrari} alt="car-banner" className="container mx-auto w-screen h-72 grayscale" />
         <div>
-        <p className="container mx-auto w-screen text-4xl font-bold mt-10">Sobre Nós</p>
-        <div className="container w-full mx-auto flex mt-8">
-          <p className="container mx-auto w-screen text-2xl pt-2 leading-relaxed"> No mercado Automóvel desde 2022, dispomos de uma vasta gama de automóveis, desde utilitários passando por todo-o-terreno, desportivos, de alta gama, bem como clássicos.
+        <p className="container mx-auto w-screen  text-xl lg:text-4xl font-bold mt-10 mr-2 ml-2">Sobre Nós</p>
+        <div className="container w-full mx-auto flex mt-8 ml-2 mr-2">
+          <p className="container mx-auto w-screen  text-l lg:text-2xl pt-2 leading-relaxed"> No mercado Automóvel desde 2022, dispomos de uma vasta gama de automóveis, desde utilitários passando por todo-o-terreno, desportivos, de alta gama, bem como clássicos.
           <br/>
           Apostamos na excelência dos nossos profissionais e na qualidade dos nossos automóveis semi-novos e usados de alta gama.
           <br/>
@@ -23,9 +23,9 @@ function AboutPage() {
           Faça parte do nosso vasto leque de clientes Stand Carrocinhas, onde poderá contar com o rigor, profissionalismo e simpatia da nossa equipa.
           <br/>
           Navegue pelo nosso stock e não hesite em contactar-nos.</p>
-          <img src={About} alt="car-inside" className="w-1/3" />
+          <img src={About} alt="car-inside" className="hidden md:flex  w-1/5 md:w-1/4 md:h-1/2 lg:w-1/3" />
           </div>
-        <p className="container mx-auto w-screen text-2xl pt-2 leading-relaxed">Stand Carrocinha é especializado na compra e venda de viaturas sport, prestige e premium usados, de todas as marcas. Instalado em Amarante, proxima da saida da A4.</p>
+        <p className="container mx-auto w-screen  text-l lg:text-2xl pt-2 leading-relaxed ml-2 mr-2">Stand Carrocinha é especializado na compra e venda de viaturas sport, prestige e premium usados, de todas as marcas. Instalado em Amarante, proxima da saida da A4.</p>
         </div>
         
         <Footer />

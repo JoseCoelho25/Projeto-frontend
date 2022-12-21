@@ -9,25 +9,28 @@ function SlideShow() {
    const params = useParams();
    const idData = params.numerodechassi;
    const data = cars.find((car) => car.numerodechassi === idData);
+  
+  console.log(value)
 
-   function nextImage(){
-     if (value > 1){
-       setValue(0);
-     }
-     else if(value <= 99 & value >= 0){
-       setValue(value + 1);
-     }
-   }
+  
+    function nextImage(){
+      if (value < data.imagens.length - 1){
+        setValue(value + 1)
+      }
+      else{
+        setValue(0)
+      }  
+   };
+  
 
-   function prevImage(){
-    if(value < 1){
-      setValue(2);
+  function prevImage(){
+    if (value < data.imagens.length && value >0 ){
+      setValue(value - 1)
     }
-     else if(value <= 99 & value >= 1){
-      setValue(value - 1);
-     }
-     
-   }
+    else{
+      setValue(data.imagens.length - 1)
+    }    
+    }
 
     function goToImage(event){
        setValue(parseInt(event.target.value));
