@@ -1,26 +1,21 @@
-import React, { useState, useRef} from 'react';
+import React, { useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
 import Speedometer from "../imgs/speedometer.png";
 import Petrol from "../imgs/petrol.png";
 import Engine from "../imgs/engine.png";
 import Gear from "../imgs/gear.png";
 import Glass from "../imgs/mag-glass.png"
-//import cars from "../data/cars.json";
+import "../app.css";
 
 // variavel para criar keys unicas
 const keygen = () => Date.now().toString() + Math.random()
 
 function Card(props) {
 	let cars= props.data;
-	//useRef para ao usar a função handleclick fazer scroll para a div
-	const ref = useRef(null);
 	
 	const [text, setText] = useState ("");
 	
 	const carsToRender = cars.filter((car) => car.marca.toLowerCase().includes(text.toLowerCase()) || car.modelo.toLowerCase().includes(text.toLowerCase()));
-	
-	//const [data, setData] = useState();
-	//const [data1, setData1] = useState();
 	
 
 	const [clicked, setClicked] = useState([]);
@@ -28,7 +23,12 @@ function Card(props) {
 	
 	//funcçao para selecionar o numero de chassi de cada card e colocar o compare true se tiver 2 elementos
 	 function handleClick (e) {
-	 	e.currentTarget.classList.toggle("bg-red-700");
+		const target = e.currentTarget;
+		if (target.classList.contains("bg-blue-400")) {
+		  target.classList.remove("bg-blue-400");
+		} else {
+		  target.classList.add("bg-red-500");
+		}
 	 	const click = e.target.value;
 	 	 //let newArray = []
 	 	 if ( clicked.includes(click)){
@@ -42,13 +42,7 @@ function Card(props) {
 	 	 	let newArray=[...clicked, click]
 	 	 	setClicked(newArray)
 			compareCheck();
-	 	 	// if (clicked.length === 1){
-	 	 	// 	setCompare(true);
-	 	 	// 	ref.current?.scrollIntoView({behavior: 'smooth'});
-	 	 	// }
-	 	 	// else{
-	 	 	// 	setCompare(false)
-	 	 	// }
+	 	 	
 	 	 }
 	 }
 	//filtros para aparecer no compare
@@ -59,17 +53,22 @@ function Card(props) {
 function compareCheck(){
 	if (clicked.length === 1){
 		setCompare(true);
-		ref.current?.scrollIntoView({behaviour: "smooth"});
 	}
 	else{
 		setCompare(false);
 	}
 }
-	
-	
+
+function removeModal(){
+	setCompare(false);
+	setClicked([]);
+}
+
+const cardClass = compare ? "blur" : "";
+
 
   return (
-    <div className="container mx-auto w-screen mt-6">
+    <div className="container mx-auto px-2 w-screen mt-6">
 		<p className="text-4xl font-bold text-center mb-2">Pesquisa Rapida</p>
 		<div className="container flex justify-center mb-8">
 			
@@ -80,7 +79,7 @@ function compareCheck(){
 			<img src={Glass} alt="glass" className=" w-10 absolute justify-end"/>
 			</div>
 		</div>
-		<div className="bg-white shadow-md rounded-lg  grid grid-cols-1 md:grid-cols-3 gap-2">
+		<div className={`bg-white shadow-md rounded-lg  grid grid-cols-1 md:grid-cols-3 gap-2 ${cardClass}`}>
 		{carsToRender.map((car)=>(
 			<div key={keygen()}>
         <Link to={`/details/${car.numerodechassi}`} className="col-span-1">
@@ -123,10 +122,12 @@ function compareCheck(){
 			</div>
 			))}
 		</div>
-		<div className="mt-8" ref={ref}>
+		<div className="" >
 		 {compare ? (
-            <div className="container mx-auto grid grid-cols-3 grid-rows-8" >
-				<div className="text-m md:text-l lg:text-xl font-bold grid grid-cols-1 gap-y-4 truncate">
+			<div className="block max-w-screen-2xl h-screen fixed 2xl:inset-0 2xl:inset-x-48 2xl:top-32 top-0">
+				<input type="button" value="Return" onClick={removeModal} className="bg-blue-400 w-full text-4xl font-bold cursor-pointer"/>
+            	<div className="container bg-white p-4 grid grid-cols-3 grid-rows-8" >
+					<div className="text-m md:text-l lg:text-4xl font-bold grid grid-cols-1 gap-y-6 truncate">
 					<div>Marca</div>
 					<div>Modelo</div>
 					<div>Preço</div>
@@ -163,6 +164,7 @@ function compareCheck(){
 					<div>{data1.portas}</div>
 				</div>
             </div>
+		</div>
           ) : (
             ''
           )}

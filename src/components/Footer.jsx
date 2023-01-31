@@ -7,7 +7,7 @@ function Footer() {
   return (
     
 
-<footer className="container mx-auto relative bg-blueGray-200 pt-8 pb-6 mt-10 w-screen">
+<footer className="container mx-auto  bg-blueGray-200 pt-8 pb-6 mt-10 w-screen">
   <div className="container mx-auto px-4 ">
     <div className="flex text-left lg:text-left ">
       <div className="container w-1/2 mx-auto block md:flex justify-center">

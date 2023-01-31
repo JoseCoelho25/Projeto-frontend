@@ -6,6 +6,8 @@
   display: none;
 }
 
+
+
 .leaflet-container {
     width:50%;
     height:50%;
@@ -21,4 +23,8 @@
 
   .container-snap::-webkit-scrollbar {
     display: none;
+}
+
+.blur {
+  filter: blur(8px);
 }
