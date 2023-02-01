@@ -21,6 +21,8 @@ npm install
 
 npm run dev
 
+see live solution: https://stand-carrocinhas.vercel.app/
+
 
 ## Tools & Libraries
 
