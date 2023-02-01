@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import cars from "../data/cars.json";
 import "../app.css";
 import { useParams } from "react-router-dom";
 
@@ -10,8 +9,6 @@ function SlideShow(props) {
    const params = useParams();
    const idData = params.numerodechassi;
    const data = cars.find((car) => car.numerodechassi === idData);
-  
-  console.log(value)
 
   
     function nextImage(){

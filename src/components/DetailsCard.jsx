@@ -1,6 +1,5 @@
 import React from 'react'
 import calendar from "../imgs/calender-color.png";
-import cars from "../data/cars.json";
 import km from "../imgs/road.png";
 import pump from "../imgs/petrol-colored.png";
 import chassis from "../imgs/chassis.png";

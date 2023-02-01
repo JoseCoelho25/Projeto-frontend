@@ -12,7 +12,7 @@ function Footer() {
     <div className="flex text-left lg:text-left ">
       <div className="container w-1/2 mx-auto block md:flex justify-center">
         <img src={Logo} alt="logo" className="w-48 h-48"/>
-        <div className=" w-full md:w-1/2 mt-6 lg:mb-0 mb-6 ">
+        <div className=" w-full md:w-1/2 mt-6 lg:mb-0 mb-6 flex">
           <button className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
             <i className="fab fa-twitter"></i></button><button className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
             <i className="fab fa-facebook-square"></i></button><button className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
@@ -23,7 +23,7 @@ function Footer() {
       </div>
       <div className="w-6/12 px-4 mx-auto">
         <div className="flex flex-wrap items-top mb-6 ">
-          <div className=" w-full lg:w-6/12 px-4 ml-auto">
+          <div className=" w-full lg:w-6/12 px-4 ml-auto mb-6 md:mb-0">
             <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span>
             <div className="">
               <Link to="/aboutpage">

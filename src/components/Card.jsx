@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState} from 'react';
 import {Link} from "react-router-dom";
 import Speedometer from "../imgs/speedometer.png";
 import Petrol from "../imgs/petrol.png";
@@ -23,20 +23,11 @@ function Card(props) {
 	
 	//funcçao para selecionar o numero de chassi de cada card e colocar o compare true se tiver 2 elementos
 	 function handleClick (e) {
-		const target = e.currentTarget;
-		if (target.classList.contains("bg-blue-400")) {
-		  target.classList.remove("bg-blue-400");
-		} else {
-		  target.classList.add("bg-red-500");
-		}
 	 	const click = e.target.value;
-	 	 //let newArray = []
 	 	 if ( clicked.includes(click)){
-	 	 	 const index = clicked.indexOf(click);
-	 	 	 //if (index > -1) { 
+	 	 	 const index = clicked.indexOf(click); 
   	 	 	 	clicked.splice(index, 1);
 	 	 	 	setClicked(clicked)
-	 	 	//}
 	 	 }
 	 	 else{
 	 	 	let newArray=[...clicked, click]
@@ -69,14 +60,14 @@ const cardClass = compare ? "blur" : "";
 
   return (
     <div className="container mx-auto px-2 w-screen mt-6">
-		<p className="text-4xl font-bold text-center mb-2">Pesquisa Rapida</p>
+		<p className="text-2xl lg:text-4xl font-bold text-center mb-2">Pesquisa Rapida</p>
 		<div className="container flex justify-center mb-8">
 			
 			<div className="flex w-2/3">
 			<input type="text" onChange={(n)=>{
 				setText(n.target.value) 
 			}} value={text} placeholder="Procure por marca, modelo, caracteristica, etc..." className="mx-auto w-full rounded-lg pl-12"/>
-			<img src={Glass} alt="glass" className=" w-10 absolute justify-end"/>
+			<img src={Glass} alt="glass" className="w-10 absolute justify-end"/>
 			</div>
 		</div>
 		<div className={`bg-white shadow-md rounded-lg  grid grid-cols-1 md:grid-cols-3 gap-2 ${cardClass}`}>
@@ -124,10 +115,10 @@ const cardClass = compare ? "blur" : "";
 		</div>
 		<div className="" >
 		 {compare ? (
-			<div className="block max-w-screen-2xl h-screen fixed 2xl:inset-0 2xl:inset-x-48 2xl:top-32 top-0">
-				<input type="button" value="Return" onClick={removeModal} className="bg-blue-400 w-full text-4xl font-bold cursor-pointer"/>
-            	<div className="container bg-white p-4 grid grid-cols-3 grid-rows-8" >
-					<div className="text-m md:text-l lg:text-4xl font-bold grid grid-cols-1 gap-y-6 truncate">
+			<div className="block max-w-screen-2xl h-screen fixed md:inset-0 md:inset-x-48 mt-12 md:mt-0 sm:top-6 md:top-12 2xl:top-32 top-0">
+				<input type="button" value="Return" onClick={removeModal} className="bg-blue-400 w-full  text-4xl font-bold cursor-pointer"/>
+            	<div className="container bg-white p-4 grid grid-cols-3 grid-rows-8 gap-x-2" >
+					<div className="text-sm md:text-l xl:text-2xl 2xl:text-4xl font-bold grid grid-cols-1 gap-y-4 truncate">
 					<div>Marca</div>
 					<div>Modelo</div>
 					<div>Preço</div>
@@ -139,7 +130,7 @@ const cardClass = compare ? "blur" : "";
 					<div>Caixa de mudanças</div>
 					<div>Portas</div>
 				</div>
-				<div className="text-m md:text-l lg:text-xl grid grid-cols-1 gap-y-4">
+				<div className="text-sm md:text-l xl:text-2xl 2xl:text-4xl grid grid-cols-1 gap-y-4">
 					<div>{data.marca}</div>
 					<div>{data.modelo}</div>
 					<div>{data.preco}€</div>
@@ -151,7 +142,7 @@ const cardClass = compare ? "blur" : "";
 					<div>{data.tranmissao}</div>
 					<div>{data.portas}</div>
 				</div>
-				<div className="text-m md:text-l lg:text-xl grid grid-cols-1 gap-y-4">
+				<div className="text-sm md:text-l xl:text-2xl 2xl:text-4xl grid grid-cols-1 gap-y-4">
 					<div>{data1.marca}</div>
 					<div>{data1.modelo}</div>
 					<div>{data1.preco}€</div>
